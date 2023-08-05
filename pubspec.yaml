@@ -1,0 +1,32 @@
+name: blog_management
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+  animated_splash_screen: ^1.3.0
+  flutter:
+    sdk: flutter
+  flutter_text_styled: ^0.5.3
+  icons_launcher: ^2.1.3
+  page_transition: ^2.0.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+
+icons_launcher:
+  image_path: "assets/ic_launcher.png"
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
