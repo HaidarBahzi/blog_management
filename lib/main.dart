@@ -1,4 +1,5 @@
 import 'package:blog_management/page/LoginPage.dart';
+import 'package:blog_management/page/Page1.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
@@ -33,6 +34,6 @@ class SplashScreen extends StatelessWidget {
           )),
         ),
         duration: 3000,
-        nextScreen: Login());
+        nextScreen: Page1());
   }
 }
