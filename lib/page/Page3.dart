@@ -24,7 +24,7 @@ class _Page3State extends State<Page3> {
               width: 370,
               child: ElevatedButton(onPressed: (){
                 Navigator.push(
-                  context,
+                  context, //osas
                 MaterialPageRoute(builder: (context) => const Page1()));
               }, child: Text("Page 1")),
             )
