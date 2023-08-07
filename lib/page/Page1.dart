@@ -16,21 +16,37 @@ class _Page1State extends State<Page1> {
         title: Text("Page 1"),
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.only(top: 300),
-              width: 370,
-              child: ElevatedButton(onPressed: (){
-                Navigator.push(
+      body: Column(
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const Page2()),
-      );
-              }, child: const Text("Page 2")),
-            )
-          ],
-        ),
+              );
+            },
+            child: Text("Go to Page 2"),
+          ),
+          SizedBox(
+              height:
+                  20), // Add some spacing between the button and the ListView
+          Expanded(
+            child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                final number = index + 1;
+                return ListTile(
+                  title: Text('Item $number'),
+                  onTap: () {
+                    // You can add specific actions when an item is tapped.
+                    // For now, it will just print the item number.
+                    print('Tapped Item $number');
+                  },
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
